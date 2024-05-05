@@ -10,11 +10,11 @@ Este aplicativo visa auxiliar o usuário a organizar suas tarefas diárias, prop
 
  
 
- 1. Criação de Tarefas: O usuário poderá criar e listar suas tarefas diárias, atribuindo a cada uma delas um título, uma descrição (opcional) e uma data de conclusão.
+1. Criação de Tarefas: O usuário poderá criar e listar suas tarefas diárias, atribuindo a cada uma delas um título, uma descrição (opcional) e uma data de conclusão.
 
 2 . Priorização de Tarefas: O aplicativo permitirá que o usuário atribua prioridades às suas tarefas, ajudando-o a focar nas atividades mais importantes ou urgentes.
 
-2 . Marcação de Tarefas Concluídas: À medida que o usuário completa suas tarefas, ele poderá marcá-las como concluídas, facilitando o acompanhamento do progresso.
+3 . Marcação de Tarefas Concluídas: À medida que o usuário completa suas tarefas, ele poderá marcá-las como concluídas, facilitando o acompanhamento do progresso.
 
  
 
