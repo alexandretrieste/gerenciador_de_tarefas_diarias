@@ -29,7 +29,7 @@
             android:id="@+id/descricaoEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite a descrição da tarefa" />
+            android:hint="Digite a descrição da tarefa (Opcional)" />
 
         <RadioGroup
             android:id="@+id/prioridadeRadioGroup"
