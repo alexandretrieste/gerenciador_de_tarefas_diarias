@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Entrega_1</string>
+    <string name="tarefa_selecionada">"Tarefa selecionada: "</string>
+    <string name="lista_tarefas_title">Lista de Tarefas</string>
 </resources>
