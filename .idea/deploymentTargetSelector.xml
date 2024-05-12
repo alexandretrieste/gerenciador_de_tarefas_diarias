@@ -32,10 +32,10 @@
       </SelectionState>
       <SelectionState runConfigName="ListaTarefasActivity">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-05-11T21:39:36.480310700Z">
+        <DropdownSelection timestamp="2024-05-12T00:32:17.942290100Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\xande\.android\avd\Nexus_4_API_23.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\xande\.android\avd\Nexus_One_API_23.avd" />
             </handle>
           </Target>
         </DropdownSelection>
