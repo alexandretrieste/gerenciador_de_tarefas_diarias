@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="titulos">
-        <item>Comprar leite</item>
-        <item>Fazer exercícios</item>
-        <item>Estudar OOP</item>
-        <item>Estudar Programação android</item>
-        <item>Fazer Prova Oracle</item>
-        <item>Sair com os amigos</item>
-        <item>Levar carro para revisão</item>
-        <item>Consertar a janela</item>
-        <item>Dar banho no dog</item>
-        <item>Cumprir a corrida matinal da sexta</item>
-        <item>Visitar os pais</item>
-        <item>Tomar botonico fontoura</item>
+        <item>@string/Comprar_leite</item>
+        <item>@string/Fazer_exercicios</item>
+        <item>@string/Estudar_OOP</item>
+        <item>@string/Estudar_Programacao_android</item>
+        <item>@string/Fazer_Prova_Oracle</item>
+        <item>@string/Sair_com_os_amigos</item>
+        <item>@string/Levar_carro_para_revisao</item>
+        <item>@string/Consertar_a_janela</item>
+        <item>@string/Dar_banho_no_dog</item>
+        <item>@string/Cumprir_a_corrida_matinal_da_sexta</item>
+        <item>@string/Visitar_os_pais</item>
+        <item>@string/Tomar_botonico_fontoura</item>
     </string-array>
 
     <string-array name="descricoes">
-        <item>Comprar leite no supermercado</item>
-        <item>Fazer 30 minutos de exercícios aeróbicos</item>
-        <item>Estudar Orientação a Objetos para a prova</item>
-        <item>Desenvolver um aplicativo Android básico</item>
-        <item>Estudar para a certificação Oracle</item>
-        <item>Encontrar os amigos no restaurante</item>
-        <item>Levar o carro na oficina para trocar o óleo</item>
-        <item>Consertar a janela da sala que está emperrada</item>
-        <item>Dar banho no cachorro no final da tarde</item>
-        <item>Correr 5 km no parque pela manhã</item>
-        <item>Passar o final de semana com os pais</item>
-        <item>Tomar remédio para gripe</item>
+        <item>@string/Comprar_leite_descricao</item>
+        <item>@string/Fazer_exercicios_descricao</item>
+        <item>@string/Estudar_OOP_descricao</item>
+        <item>@string/Estudar_Programacao_android_descricao</item>
+        <item>@string/Fazer_Prova_Oracle_descricao</item>
+        <item>@string/Sair_com_os_amigos_descricao</item>
+        <item>@string/Levar_carro_para_revisao_descricao</item>
+        <item>@string/Consertar_a_janela_descricao</item>
+        <item>@string/Dar_banho_no_dog_descricao</item>
+        <item>@string/Cumprir_a_corrida_matinal_da_sexta_descricao</item>
+        <item>@string/Visitar_os_pais_descricao</item>
+        <item>@string/Tomar_botonico_fontoura_descricao</item>
     </string-array>
 
     <string-array name="prioridades">
-        <item>Alta</item>
-        <item>Média</item>
-        <item>Baixa</item>
-        <item>Média</item>
-        <item>Alta</item>
-        <item>Baixa</item>
-        <item>Baixa</item>
-        <item>Alta</item>
-        <item>Baixa</item>
-        <item>Alta</item>
-        <item>Alta</item>
-        <item>Baixa</item>
+        <item>@string/Alta</item>
+        <item>@string/Media</item>
+        <item>@string/Baixa</item>
+        <item>@string/Media</item>
+        <item>@string/Alta</item>
+        <item>@string/Baixa</item>
+        <item>@string/Baixa</item>
+        <item>@string/Alta</item>
+        <item>@string/Baixa</item>
+        <item>@string/Alta</item>
+        <item>@string/Alta</item>
+        <item>@string/Baixa</item>
     </string-array>
 
     <string-array name="concluidas">

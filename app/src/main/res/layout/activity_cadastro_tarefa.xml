@@ -12,24 +12,24 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Título:" />
+            android:text="@string/t_tulo" />
 
         <EditText
             android:id="@+id/tituloEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite o título da tarefa" />
+            android:hint="@string/digite_o_t_tulo_da_tarefa" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Descrição:" />
+            android:text="@string/descri_o" />
 
         <EditText
             android:id="@+id/descricaoEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite a descrição da tarefa (Opcional)" />
+            android:hint="@string/digite_a_descri_o_da_tarefa_opcional" />
 
         <RadioGroup
             android:id="@+id/prioridadeRadioGroup"
@@ -41,26 +41,26 @@
                 android:id="@+id/radioButtonAlta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alta Prioridade" />
+                android:text="@string/alta_prioridade" />
 
             <RadioButton
                 android:id="@+id/radioButtonMedia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Média Prioridade" />
+                android:text="@string/m_dia_prioridade" />
 
             <RadioButton
                 android:id="@+id/radioButtonBaixa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Baixa Prioridade" />
+                android:text="@string/baixa_prioridade" />
         </RadioGroup>
 
         <CheckBox
             android:id="@+id/concluidaCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tarefa Concluída" />
+            android:text="@string/tarefa_conclu_da" />
 
         <Spinner
             android:id="@+id/categoriaSpinner"
@@ -71,12 +71,12 @@
             android:id="@+id/limparButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Limpar" />
+            android:text="@string/limpar" />
 
         <Button
             android:id="@+id/salvarButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Salvar" />
+            android:text="@string/salvar" />
     </LinearLayout>
 </ScrollView>
