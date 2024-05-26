@@ -35,9 +35,18 @@
     <string name="alta_prioridade">Alta Prioridade</string>
     <string name="m_dia_prioridade">Média Prioridade</string>
     <string name="baixa_prioridade">Baixa Prioridade</string>
-    <string name="tarefa_conclu_da">Tarefa Concluída</string>
+    <string name="tarefa_concluida">Tarefa Concluída</string>
     <string name="limpar">Limpar</string>
     <string name="salvar">Salvar</string>
     <string name="t_tulo">Título:</string>
     <string name="descri_o">Descrição:</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="sobre">Sobre</string>
+    <string name="Pos_java">Pós-Graduando em Programação em Java</string>
+    <string name="alexandre_alunos_utfpr_edu_br">alexandretrieste@alunos.utfpr.edu.br</string>
+    <string name="Descricao_do_app">Aplicativo de gestão de tempo: aqui você pode cadastrar suas tarefas diversas e marcá-las como concluídas quando efetivamente o fizer.</string>
+    <string name="logo_utfpr">Logo UTFPR</string>
+    <string name="utfpr">Universidade Tecnológia Federal do Paraná - UTFPR</string>
+    <string name="autor">Alexandre Trieste</string>
+    <string name="cadastrar_tarefa">Cadastrar Tarefa</string>
 </resources>

@@ -1,50 +1,64 @@
 package com.br.alexandretrieste.entrega_1;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ListaTarefasActivity extends AppCompatActivity {
 
+    private static final int REQUEST_CODE_ADICIONAR_TAREFA = 1;
+
     private ListView listView;
     private ArrayList<Tarefa> tarefas;
+    private TarefaAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_tarefas);
 
-        // Inicializar a ListView
         listView = findViewById(R.id.listView);
+        Button adicionarButton = findViewById(R.id.adicionarButton);
+        Button sobreButton = findViewById(R.id.sobreButton);
 
-        // Carregar os dados do arrays.xml
-        String[] titulosArray = getResources().getStringArray(R.array.titulos);
-        String[] descricoesArray = getResources().getStringArray(R.array.descricoes);
-        String[] prioridadesArray = getResources().getStringArray(R.array.prioridades);
-        String[] concluidasStringArray = getResources().getStringArray(R.array.concluidas);
-        boolean[] concluidasArray = new boolean[concluidasStringArray.length];
-        for (int i = 0; i < concluidasStringArray.length; i++) {
-            concluidasArray[i] = Boolean.parseBoolean(concluidasStringArray[i]);
-        }
-
-        // Criar a lista de tarefas com base nos arrays carregados
         tarefas = new ArrayList<>();
-        for (int i = 0; i < titulosArray.length; i++) {
-            Tarefa tarefa = new Tarefa(titulosArray[i], descricoesArray[i], prioridadesArray[i], concluidasArray[i]);
-            tarefas.add(tarefa);
-        }
-
-        // Configurar o adapter personalizado para a ListView
-        TarefaAdapter adapter = new TarefaAdapter(this, tarefas);
+        adapter = new TarefaAdapter(this, tarefas);
         listView.setAdapter(adapter);
 
-        // Configurar o clique nos itens da lista
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Tarefa tarefaClicada = tarefas.get(position);
             Toast.makeText(getApplicationContext(), getString(R.string.tarefa_selecionada) + tarefaClicada.getTitulo(), Toast.LENGTH_SHORT).show();
         });
+
+        adicionarButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ListaTarefasActivity.this, CadastroTarefaActivity.class);
+            startActivityForResult(intent, REQUEST_CODE_ADICIONAR_TAREFA);
+        });
+
+        sobreButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ListaTarefasActivity.this, SobreActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            String titulo = data.getStringExtra("titulo");
+            String descricao = data.getStringExtra("descricao");
+            String prioridade = data.getStringExtra("prioridade");
+            boolean concluida = data.getBooleanExtra("concluida", false);
+            String categoria = data.getStringExtra("categoria"); // Pega a categoria
+
+            Tarefa novaTarefa = new Tarefa(titulo, descricao, prioridade, concluida, categoria); // Construtor atualizado
+            tarefas.add(novaTarefa);
+            adapter.notifyDataSetChanged();
+        }
     }
 }
