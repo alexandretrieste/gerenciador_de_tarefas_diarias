@@ -1,82 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- TextView para o título -->
+    <TextView
+        android:id="@+id/tituloTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/Android_bar"
+        android:gravity="center"
+        android:padding="16dp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="@string/cadastrar_tarefa"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- EditText para o título da tarefa -->
+    <TextView
+        android:id="@+id/tituloLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/t_tulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloTextView" />
+
+    <EditText
+        android:id="@+id/tituloEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints="Título da tarefa"
+        android:hint="@string/digite_o_t_tulo_da_tarefa"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloLabelTextView" />
+
+    <!-- EditText para a descrição da tarefa -->
+    <TextView
+        android:id="@+id/descricaoLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/descri_o"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloEditText" />
+
+    <EditText
+        android:id="@+id/descricaoEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints="Descrição da tarefa"
+        android:hint="@string/digite_a_descri_o_da_tarefa_opcional"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descricaoLabelTextView" />
+
+    <!-- RadioGroup para a prioridade -->
+    <RadioGroup
+        android:id="@+id/prioridadeRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descricaoEditText">
+
+        <RadioButton
+            android:id="@+id/radioButtonAlta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alta_prioridade" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m_dia_prioridade" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBaixa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/baixa_prioridade" />
+    </RadioGroup>
+
+    <!-- CheckBox para tarefa concluída -->
+    <CheckBox
+        android:id="@+id/concluidaCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tarefa_concluida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prioridadeRadioGroup" />
+
+    <!-- Spinner para categoria -->
+    <Spinner
+        android:id="@+id/categoriaSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/concluidaCheckBox" />
+
+    <!-- Container para os botões -->
     <LinearLayout
+        android:id="@+id/buttonContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/t_tulo" />
-
-        <EditText
-            android:id="@+id/tituloEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/digite_o_t_tulo_da_tarefa" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/descri_o" />
-
-        <EditText
-            android:id="@+id/descricaoEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/digite_a_descri_o_da_tarefa_opcional" />
-
-        <RadioGroup
-            android:id="@+id/prioridadeRadioGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/radioButtonAlta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/alta_prioridade" />
-
-            <RadioButton
-                android:id="@+id/radioButtonMedia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/m_dia_prioridade" />
-
-            <RadioButton
-                android:id="@+id/radioButtonBaixa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/baixa_prioridade" />
-        </RadioGroup>
-
-        <CheckBox
-            android:id="@+id/concluidaCheckBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tarefa_conclu_da" />
-
-        <Spinner
-            android:id="@+id/categoriaSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/limparButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/limpar" />
+            android:layout_weight="1"
+            android:text="Limpar" />
 
         <Button
             android:id="@+id/salvarButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/salvar" />
+            android:layout_weight="1"
+            android:text="Salvar" />
     </LinearLayout>
-</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

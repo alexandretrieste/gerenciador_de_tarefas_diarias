@@ -1,5 +1,6 @@
 package com.br.alexandretrieste.entrega_1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -74,7 +75,7 @@ public class CadastroTarefaActivity extends AppCompatActivity {
                     prioridade = "Baixa";
                 }
                 boolean concluida = concluidaCheckBox.isChecked();
-                String categoria = categoriaSpinner.getSelectedItem().toString();
+                String categoria = categoriaSpinner.getSelectedItem().toString(); // Pega a categoria
 
                 if (titulo.isEmpty() || prioridade.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Preencha todos os campos obrigatórios", Toast.LENGTH_SHORT).show();
@@ -84,11 +85,14 @@ public class CadastroTarefaActivity extends AppCompatActivity {
                         radioButtonAlta.requestFocus();
                     }
                 } else {
-                    Toast.makeText(getApplicationContext(), "Tarefa salva: " + titulo, Toast.LENGTH_SHORT).show();
-                    tituloEditText.setText("");
-                    descricaoEditText.setText("");
-                    prioridadeRadioGroup.clearCheck();
-                    concluidaCheckBox.setChecked(false);
+                    Intent resultIntent = new Intent();
+                    resultIntent.putExtra("titulo", titulo);
+                    resultIntent.putExtra("descricao", descricao);
+                    resultIntent.putExtra("prioridade", prioridade);
+                    resultIntent.putExtra("concluida", concluida);
+                    resultIntent.putExtra("categoria", categoria); // Passa a categoria
+                    setResult(RESULT_OK, resultIntent);
+                    finish();
                 }
             }
         });

@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="roxo">#8657c5</color>
+    <color name="Android_bar">#ff6750a4</color>
 </resources>

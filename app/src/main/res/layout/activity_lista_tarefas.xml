@@ -7,31 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".ListaTarefasActivity">
 
-    <!-- ListView para exibir os itens -->
-
     <TextView
         android:id="@+id/tituloTextView"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_marginTop="0dp"
-        android:background="#673ab7"
-        android:gravity="center_vertical|center_horizontal"
+        android:layout_width="409dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/Android_bar"
+        android:gravity="center"
         android:padding="16dp"
-        android:shadowColor="#000000"
+        android:shadowColor="@android:color/black"
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1"
         android:text="@string/lista_tarefas_title"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- ListView para exibir os itens -->
     <ListView
         android:id="@+id/listView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/white"
@@ -39,18 +40,33 @@
         android:divider="@null"
         android:dividerHeight="0dp"
         android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
+        app:layout_constraintTop_toBottomOf="@+id/tituloTextView" />
+
+    <!-- Container para os botões -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tituloTextView"
-        tools:listitem="@layout/item_tarefa" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        app:constraint_referenced_ids="tituloTextView" />
+        <Button
+            android:id="@+id/adicionarButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Adicionar" />
+
+        <Button
+            android:id="@+id/sobreButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sobre" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
