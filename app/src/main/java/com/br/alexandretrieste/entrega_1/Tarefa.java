@@ -1,22 +1,22 @@
 package com.br.alexandretrieste.entrega_1;
 
-public class Tarefa {
+import java.io.Serializable;
+
+public class Tarefa implements Serializable {
     private String titulo;
     private String descricao;
     private String prioridade;
     private boolean concluida;
-    private String categoria; // Novo atributo
+    private String categoria;
 
-    // Construtor atualizado para incluir categoria
     public Tarefa(String titulo, String descricao, String prioridade, boolean concluida, String categoria) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.prioridade = prioridade;
         this.concluida = concluida;
-        this.categoria = categoria; // Inicializar novo atributo
+        this.categoria = categoria;
     }
 
-    // Getters e setters para todos os atributos
     public String getTitulo() {
         return titulo;
     }
