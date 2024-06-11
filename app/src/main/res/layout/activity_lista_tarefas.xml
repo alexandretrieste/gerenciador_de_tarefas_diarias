@@ -7,66 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".ListaTarefasActivity">
 
-    <TextView
-        android:id="@+id/tituloTextView"
-        android:layout_width="409dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/Android_bar"
-        android:gravity="center"
-        android:padding="16dp"
-        android:shadowColor="@android:color/black"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1"
-        android:text="@string/lista_tarefas_title"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/listView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- ListView para exibir os itens -->
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:background="@android:color/white"
+        android:padding="16dp"
         android:clipToPadding="false"
         android:divider="@null"
         android:dividerHeight="0dp"
-        android:padding="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
-        app:layout_constraintTop_toBottomOf="@+id/tituloTextView" />
-
-    <!-- Container para os botões -->
-    <LinearLayout
-        android:id="@+id/buttonContainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/adicionarButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Adicionar" />
-
-        <Button
-            android:id="@+id/sobreButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Sobre" />
-    </LinearLayout>
-
+        android:background="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

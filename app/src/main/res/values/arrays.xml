@@ -59,4 +59,9 @@
         <item>true</item>
         <item>false</item>
     </string-array>-->
+    <string-array name="categorias_array">
+        <item>Casa</item>
+        <item>Estudos</item>
+        <item>Trabalho</item>
+    </string-array>
 </resources>
