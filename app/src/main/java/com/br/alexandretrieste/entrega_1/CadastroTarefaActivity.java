@@ -3,22 +3,18 @@ package com.br.alexandretrieste.entrega_1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-<<<<<<< HEAD
 import android.view.MenuInflater;
 import android.view.MenuItem;
-=======
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
->>>>>>> 3652e9a45ecbf82e6eb14ecb7cc1cdce791d806a
+import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-<<<<<<< HEAD
-
-=======
 import androidx.annotation.NonNull;
->>>>>>> 3652e9a45ecbf82e6eb14ecb7cc1cdce791d806a
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CadastroTarefaActivity extends AppCompatActivity {
@@ -26,13 +22,10 @@ public class CadastroTarefaActivity extends AppCompatActivity {
     private EditText descricaoEditText;
     private RadioGroup prioridadeRadioGroup;
     private CheckBox concluidaCheckBox;
-<<<<<<< HEAD
     private Tarefa tarefa;
-=======
     private Spinner categoriaSpinner;
     private boolean isEditMode = false;
     private int position = -1;
->>>>>>> 3652e9a45ecbf82e6eb14ecb7cc1cdce791d806a
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +36,7 @@ public class CadastroTarefaActivity extends AppCompatActivity {
         descricaoEditText = findViewById(R.id.descricaoEditText);
         prioridadeRadioGroup = findViewById(R.id.prioridadeRadioGroup);
         concluidaCheckBox = findViewById(R.id.concluidaCheckBox);
-<<<<<<< HEAD
-=======
         categoriaSpinner = findViewById(R.id.categoriaSpinner);
->>>>>>> 3652e9a45ecbf82e6eb14ecb7cc1cdce791d806a
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -59,7 +49,6 @@ public class CadastroTarefaActivity extends AppCompatActivity {
         }
     }
 
-<<<<<<< HEAD
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -99,7 +88,16 @@ public class CadastroTarefaActivity extends AppCompatActivity {
         resultIntent.putExtra("tarefa", tarefa);
         setResult(RESULT_OK, resultIntent);
         finish();
-=======
+
+        List<String> categorias = new ArrayList<>();
+        categorias.add("Casa");
+        categorias.add("Estudos");
+        categorias.add("Trabalho");
+
+        ArrayAdapter<String> categoriaAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, categorias);
+        categoriaAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        categoriaSpinner.setAdapter(categoriaAdapter);
+
         Intent intent = getIntent();
         if (intent.hasExtra("tarefa")) {
             Tarefa tarefa = (Tarefa) intent.getSerializableExtra("tarefa");
@@ -180,7 +178,6 @@ public class CadastroTarefaActivity extends AppCompatActivity {
             setResult(RESULT_OK, resultIntent);
             finish();
         }
->>>>>>> 3652e9a45ecbf82e6eb14ecb7cc1cdce791d806a
     }
 
     private void limparCampos() {
@@ -188,11 +185,9 @@ public class CadastroTarefaActivity extends AppCompatActivity {
         descricaoEditText.setText("");
         prioridadeRadioGroup.clearCheck();
         concluidaCheckBox.setChecked(false);
-<<<<<<< HEAD
         Toast.makeText(this, "Campos limpos", Toast.LENGTH_SHORT).show();
-=======
+
         categoriaSpinner.setSelection(0);
         Toast.makeText(getApplicationContext(), "Campos limpos", Toast.LENGTH_SHORT).show();
->>>>>>> 3652e9a45ecbf82e6eb14ecb7cc1cdce791d806a
     }
 }
