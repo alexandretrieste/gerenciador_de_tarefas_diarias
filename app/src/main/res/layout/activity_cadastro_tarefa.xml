@@ -10,6 +10,7 @@
         android:padding="16dp">
 
         <TextView
+            android:id="@+id/tituloTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/t_tulo" />
@@ -60,23 +61,11 @@
             android:id="@+id/concluidaCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tarefa_conclu_da" />
+            android:text="@string/tarefa_concluida" />
 
         <Spinner
             android:id="@+id/categoriaSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/limparButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/limpar" />
-
-        <Button
-            android:id="@+id/salvarButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/salvar" />
     </LinearLayout>
 </ScrollView>
