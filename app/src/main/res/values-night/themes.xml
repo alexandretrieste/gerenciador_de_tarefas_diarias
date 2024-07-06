@@ -1,7 +1,21 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MenuOpcoes" parent="Theme.Material3.Dark">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+<resources>
+    <style name="Theme.Entrega_1" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Primary branding color -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+
+        <!-- Background color -->
+        <item name="android:colorBackground">@color/background_night</item>
+
+        <!-- Text color -->
+        <item name="android:textColor">@color/text_night</item>
+
+        <!-- Status bar and navigation bar colors -->
+        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:navigationBarColor">@color/black</item>
+
+        <!-- Ensure text on status bar is light for visibility -->
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 </resources>

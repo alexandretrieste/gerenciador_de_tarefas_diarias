@@ -2,12 +2,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menu_adicionar"
-        android:title="Adicionar"
+        android:title="@string/adicionar"
         android:icon="@drawable/ic_add"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_sobre"
-        android:title="Sobre"
+        android:title="@string/sobre"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_configuracoes"
+        android:title="@string/configuracoes"
         app:showAsAction="never" />
 </menu>

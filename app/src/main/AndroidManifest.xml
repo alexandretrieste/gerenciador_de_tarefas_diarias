@@ -21,6 +21,10 @@
             android:exported="true">
         </activity>
         <activity
+            android:name=".ConfiguracoesActivity"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".ListaTarefasActivity"
             android:exported="true">
             <intent-filter>

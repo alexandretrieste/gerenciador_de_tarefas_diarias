@@ -27,12 +27,28 @@ public class TarefaAdapter extends ArrayAdapter<Tarefa> {
         TextView descricaoTextView = convertView.findViewById(R.id.descricaoTextView);
         TextView prioridadeTextView = convertView.findViewById(R.id.prioridadeTextView);
         TextView concluidaTextView = convertView.findViewById(R.id.concluidaTextView);
+        TextView dataTextView = convertView.findViewById(R.id.dataTextView);
 
         tituloTextView.setText(tarefa.getTitulo());
         descricaoTextView.setText(tarefa.getDescricao());
-        prioridadeTextView.setText(tarefa.getPrioridade());
-        concluidaTextView.setText(tarefa.isConcluida() ? "Concluída" : "Pendente");
+        prioridadeTextView.setText(getPriorityString(tarefa.getPrioridade()));
+        concluidaTextView.setText(tarefa.isConcluida() ? getContext().getString(R.string.concluida) : getContext().getString(R.string.nao_concluida));
+        dataTextView.setText(tarefa.getData());
 
         return convertView;
+    }
+
+    private String getPriorityString(String priority) {
+        Context context = getContext();
+        switch (priority) {
+            case "High":
+                return context.getString(R.string.Alta);
+            case "Medium":
+                return context.getString(R.string.Media);
+            case "Low":
+                return context.getString(R.string.Baixa);
+            default:
+                return priority;
+        }
     }
 }

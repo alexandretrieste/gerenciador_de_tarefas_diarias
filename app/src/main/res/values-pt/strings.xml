@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Hábitos Saudáveis</string>
+    <string name="Alta">Alta</string>
+    <string name="Media">Média</string>
+    <string name="Baixa">Baixa</string>
+    <string name="digite_o_t_tulo_da_tarefa">Digite o título da tarefa</string>
+    <string name="digite_a_descri_o_da_tarefa_opcional">Digite a descrição da tarefa (opcional)</string>
+    <string name="tarefa_concluida">Tarefa Concluída</string>
+    <string name="limpar">Limpar</string>
+    <string name="salvar">Salvar</string>
+    <string name="t_tulo">Título:</string>
+    <string name="descri_o">Descrição:</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="sobre">Sobre</string>
+    <string name="Pos_java">Pós-graduação em Programação Java</string>
+    <string name="alexandre_alunos_utfpr_edu_br">alexandretrieste@alunos.utfpr.edu.br</string>
+    <string name="Descricao_do_app">Aplicativo de gerenciamento de tempo: aqui você pode registrar suas várias tarefas e marcá-las como concluídas quando realmente o fizer.</string>
+    <string name="logo_utfpr">Logo UTFPR</string>
+    <string name="utfpr">Universidade Tecnológica Federal do Paraná - UTFPR</string>
+    <string name="autor">Alexandre Trieste</string>
+    <string name="cadastrar_tarefa">Cadastrar Tarefa</string>
+    <string name="categoria">Categoria</string>
+    <string name="casa">Casa</string>
+    <string name="estudos">Estudos</string>
+    <string name="trabalho">Trabalho</string>
+    <string name="tarefa">Tarefa</string>
+    <string name="preencha_todos_os_campos_obrigatorios">Preencha todos os campos obrigatórios</string>
+    <string name="campos_limpos">Campos limpos</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="modo_normal">Modo Normal</string>
+    <string name="modo_noturno">Modo Noturno</string>
+    <string name="ordenar_por">Ordenar por</string>
+    <string name="alfabetica">Alfabética</string>
+    <string name="data">Data</string>
+    <string name="tarefa_selecionada">Tarefa selecionada</string>
+    <string name="editar">Editar</string>
+    <string name="excluir">Excluir</string>
+    <string name="idioma">Idioma</string>
+    <string name="concluida">Concluída</string>
+    <string name="nao_concluida">Pendente</string>
+    <string name="ingles">Inglês</string>
+    <string name="portugues">Português</string>
+    <string name="data_da_tarefa">Data</string>
+    <string name="confirm_delete">Confirma a exclusão desta tarefa?</string>
+    <string name="delete">Excluir</string>
+    <string name="cancel">Cancelar</string>
+    <string name="confirmar_exclusao_titulo">Confirmar Exclusão</string>
+    <string name="confirmar_exclusao_mensagem">Tem certeza de que deseja excluir esta tarefa?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string-array name="idioma_options">
+        <item>Inglês</item>
+        <item>Português</item>
+    </string-array>
+</resources>
