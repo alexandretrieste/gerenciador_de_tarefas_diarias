@@ -32,6 +32,12 @@
             android:layout_height="wrap_content"
             android:hint="@string/digite_a_descri_o_da_tarefa_opcional" />
 
+        <EditText
+            android:id="@+id/dataEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/data" />
+
         <RadioGroup
             android:id="@+id/prioridadeRadioGroup"
             android:layout_width="wrap_content"
@@ -42,19 +48,19 @@
                 android:id="@+id/radioButtonAlta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/alta_prioridade" />
+                android:text="@string/Alta" />
 
             <RadioButton
                 android:id="@+id/radioButtonMedia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/m_dia_prioridade" />
+                android:text="@string/Media" />
 
             <RadioButton
                 android:id="@+id/radioButtonBaixa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/baixa_prioridade" />
+                android:text="@string/Baixa" />
         </RadioGroup>
 
         <CheckBox

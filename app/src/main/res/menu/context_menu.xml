@@ -2,13 +2,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menu_editar"
-        android:title="Editar"
+        android:title="@string/editar"
         android:icon="@drawable/ic_edit"
         app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/menu_excluir"
-        android:title="Excluir"
-        android:icon="@drawable/ic_delete"
-        app:showAsAction="ifRoom"/>
+    android:id="@+id/menu_excluir"
+    android:title="@string/excluir"
+    android:icon="@drawable/ic_delete"
+    app:showAsAction="ifRoom"/>
 </menu>

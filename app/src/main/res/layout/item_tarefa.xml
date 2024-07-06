@@ -1,32 +1,42 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:padding="16dp">
+
+<TextView
+    android:id="@+id/tituloTextView"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:text="Título da Tarefa"
+    android:textColor="?android:attr/textColorPrimary"
+    android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/tituloTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
+<TextView
+    android:id="@+id/descricaoTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Descrição da Tarefa"
+    android:textColor="?android:attr/textColorSecondary" />
 
-    <TextView
-        android:id="@+id/descricaoTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"/>
+<TextView
+    android:id="@+id/prioridadeTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Prioridade da Tarefa"
+    android:textColor="?android:attr/textColorSecondary" />
 
-    <TextView
-        android:id="@+id/prioridadeTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"/>
+<TextView
+    android:id="@+id/concluidaTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Status da Tarefa"
+    android:textColor="?android:attr/textColorSecondary" />
 
-    <TextView
-        android:id="@+id/concluidaTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"/>
+<TextView
+    android:id="@+id/dataTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/data_da_tarefa"
+    android:textColor="?android:attr/textColorSecondary" />
 </LinearLayout>
